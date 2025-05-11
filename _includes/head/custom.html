@@ -1,11 +1,40 @@
-<!-- Favicon configuration -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicons/apple-touch-icon.png' | relative_url }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicons/favicon-32x32.png' | relative_url }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicons/favicon-16x16.png' | relative_url }}">
-<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-<link rel="mask-icon" href="{{ '/assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
-<link rel="shortcut icon" href="{{ '/assets/images/favicons/favicon.ico' | relative_url }}">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="{{ '/browserconfig.xml' | relative_url }}">
-<meta name="theme-color" content="#ffffff">
-}
+<!-- Custom head includes -->
+<style>
+  /* Dodajemy niestandardowe style, jeśli są potrzebne */
+  .main-navigation {
+    background-color: #333;
+    padding: 10px 0;
+  }
+
+  .main-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-navigation li {
+    margin-right: 20px;
+  }
+
+  .main-navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .main-navigation a:hover {
+    color: #ff6f61;
+  }
+
+  .description {
+    font-size: 12px;
+    color: #bbb;
+  }
+</style>
+
+<script>
+  // Możesz dodać skrypty JS, jeśli chcesz, aby były ładowane w nagłówku
+  console.log("Custom JavaScript loaded.");
+</script>

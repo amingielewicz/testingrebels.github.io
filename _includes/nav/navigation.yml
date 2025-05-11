@@ -1,0 +1,14 @@
+<nav class="main-navigation">
+  <ul>
+    {% for item in site.data.navigation.main %}
+      <li>
+        <a href="{{ item.url }}" title="{{ item.description | default: item.title }}">
+          {{ item.title }}
+        </a>
+        {% if item.description %}
+          <span class="description">{{ item.description }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

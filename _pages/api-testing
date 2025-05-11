@@ -1,0 +1,8 @@
+---
+layout: category
+title: "Testowanie API"
+permalink: /api-testing/
+taxonomy: api
+---
+
+Wszystko, co musisz wiedzieć o testowaniu API – od podstaw SOAP i REST, przez narzędzia takie jak SoapUI, Postman, aż po automatyzację z REST Assured.

@@ -15,7 +15,7 @@ description: "Strona edukacyjna o testowaniu oprogramowania – testy manualne, 
 url: "https://testingrebels.github.io"
 baseurl: ""
 repository: "testingrebels/testingrebels.github.io"
-logo: "/assets/images/logo.png"
+logo: "/assets/images/testingrebels.png"
 masthead_title: "Testing Rebels"
 breadcrumbs: true
 words_per_minute: 200
@@ -24,8 +24,8 @@ enable_copy_code_button: true
 # ----------------------------------------
 # SEO
 # ----------------------------------------
-google_site_verification: 
-bing_site_verification: 
+google_site_verification:
+bing_site_verification:
 
 # ----------------------------------------
 # Social Sharing
@@ -62,10 +62,20 @@ author:
 # Footer
 # ----------------------------------------
 footer:
+  custom: true
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/testingrebels"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/twoj-profil"
+
+# ----------------------------------------
+# Navigation
+# ----------------------------------------
+navigation:
+  custom: true
 
 # ----------------------------------------
 # Reading Files
@@ -113,35 +123,3 @@ timezone: Europe/Warsaw
 # Plugins
 # ----------------------------------------
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-include-cache
-
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-include-cache
-
-# ----------------------------------------
-# Defaults
-# ----------------------------------------
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      sidebar:
-        nav: "main"
-
-# ----------------------------------------
-# Compress HTML
-# ----------------------------------------
-compress_html:
-  clippings: all
-  ignore:
-    envs: development

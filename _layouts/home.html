@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <!-- Inne meta tagi -->
+</head>
+<body>
+  <!-- Nagłówek -->
+  <header>
+    <div class="logo">
+      <a href="/">Moja Strona</a>
+    </div>
+    <!-- Dodaj nawigację -->
+    {% include navigation.html %}
+  </header>
+
+  <!-- Zawartość strony -->
+  <main>
+    {{ content }}
+  </main>
+
+  <!-- Stopka -->
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} Moja Strona</p>
+  </footer>
+</body>
+</html>

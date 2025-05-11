@@ -1,9 +1,15 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
+  - title: "Strona główna"
+    url: /
+  - title: "API"
+    url: /api/
+    description: "Instruktaże dotyczące testów API."
+  - title: "Automatyzacja"
+    url: /aute/
+    description: "Instruktaże dotyczące testów automatycznych."
+  - title: "Ogólnie o testach"
+    url: /general/
+    description: "Wszystko ogólnie o testach."
+  - title: "O mnie"
     url: /about/
+    description: "Strona o mnie."
