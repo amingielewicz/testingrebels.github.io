@@ -1,29 +1,40 @@
+---
+layout: default
+title: {{ site.title }}
+---
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} - {{ site.title }}</title>
-  <!-- Inne meta tagi -->
 </head>
 <body>
-  <!-- Nagłówek -->
-  <header>
-    <div class="logo">
-      <a href="/">Moja Strona</a>
-    </div>
-    <!-- Dodaj nawigację -->
-    {% include navigation.html %}
-  </header>
 
-  <!-- Zawartość strony -->
+  <header class="main-header">
+  <div class="header-content">
+    <img src="/assets/images/testingrebels.png" alt="Logo" class="logo">
+    <div class="title-and-nav">
+      <h1 class="site-title">{{ site.title }}</h1>
+      <nav class="site-nav">
+        {% include nav/navigation.html %}
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+  <!-- Główna zawartość strony -->
   <main>
     {{ content }}
   </main>
 
   <!-- Stopka -->
   <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} Moja Strona</p>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
+
 </body>
 </html>
