@@ -1,6 +1,40 @@
+@import "minimal-mistakes"; 
+
+.main-header {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+}
 
 
-/* Dodajemy niestandardowe style */
+.logo {
+  width: 500px !important;
+  height: auto;
+  max-width: none !important;
+  display: block;
+}
+
+.title-and-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  font-size: 48px;
+  margin: 0 0 10px;
+}
+
+.site-nav {
+  font-size: 16px;
+}
 
 .main-navigation {
   background-color: #333;
@@ -34,9 +68,34 @@
   color: #bbb;
 }
 
-/* Powiększenie logo */
-.site-logo img {
-  max-width: 200px; /* Zmieniaj wartość, aby dostosować rozmiar */
-  height: auto;
+.nav-links {
+  margin-top: 10px;
+
+  .nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav-menu li {
+    margin: 0;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
+
+
+
 

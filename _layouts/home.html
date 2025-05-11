@@ -12,16 +12,19 @@ title: {{ site.title }}
 </head>
 <body>
 
-  <!-- Nagłówek -->
-  <header>
-    <div class="logo-container">
-      <img src="/assets/images/testingrebels.png" alt="Logo" class="logo">
-      <div class="site-title">{{ site.title }}</div>
+  <header class="main-header">
+  <div class="header-content">
+    <img src="/assets/images/testingrebels.png" alt="Logo" class="logo">
+    <div class="title-and-nav">
+      <h1 class="site-title">{{ site.title }}</h1>
+      <nav class="site-nav">
+        {% include nav/navigation.html %}
+      </nav>
     </div>
+  </div>
+</header>
 
-    <!-- Nawigacja -->
-    {% include nav/navigation.html %}
-  </header>
+
 
   <!-- Główna zawartość strony -->
   <main>
