@@ -1,115 +1,147 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# ----------------------------------------
+# Theme Settings
+# ----------------------------------------
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: MM
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
-search: true
+# ----------------------------------------
+# Site Settings
+# ----------------------------------------
+locale: "pl-PL"
+title: "Testing Rebels"
+title_separator: "-"
+name: "PanekAdamek"
+description: "Strona edukacyjna o testowaniu oprogramowania – testy manualne, automatyczne i API."
+url: "https://testingrebels.github.io"
+baseurl: ""
+repository: "testingrebels/testingrebels.github.io"
+logo: "/assets/images/logo.png"
+masthead_title: "Testing Rebels"
+breadcrumbs: true
+words_per_minute: 200
+enable_copy_code_button: true
 
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# ----------------------------------------
+# SEO
+# ----------------------------------------
+google_site_verification: 
+bing_site_verification: 
 
+# ----------------------------------------
+# Social Sharing
+# ----------------------------------------
+twitter:
+  username: ""
+facebook:
+  username: ""
+og_image: "/assets/images/social-share.png"
+social:
+  type: "Organization"
+  name: "Testing Rebels"
+  links:
+    - "https://github.com/testingrebels"
+
+# ----------------------------------------
+# Author Info
+# ----------------------------------------
+author:
+  name: "PanekAdamek"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Autor strony Testing Rebels. Specjalizuję się w testach manualnych, automatycznych i API."
+  location: "Polska"
+  email: "bonoboczemunie@gmail.com"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:bonoboczemunie@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/testingrebels"
+
+# ----------------------------------------
+# Footer
+# ----------------------------------------
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/testingrebels"
+
+# ----------------------------------------
+# Reading Files
+# ----------------------------------------
 include:
+  - .htaccess
   - _pages
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# ----------------------------------------
+# Conversion
+# ----------------------------------------
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
 
-# Plugins (previously gems:)
+# ----------------------------------------
+# Markdown Processing
+# ----------------------------------------
+kramdown:
+  input: GFM
+  auto_ids: true
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+# ----------------------------------------
+# Sass
+# ----------------------------------------
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# ----------------------------------------
+# Output
+# ----------------------------------------
+permalink: /:categories/:title/
+timezone: Europe/Warsaw
+
+# ----------------------------------------
+# Plugins
+# ----------------------------------------
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
 
-author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
 
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
-
+# ----------------------------------------
+# Defaults
+# ----------------------------------------
 defaults:
-  # _posts
   - scope:
       path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
+      share: true
+      sidebar:
+        nav: "main"
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+# ----------------------------------------
+# Compress HTML
+# ----------------------------------------
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
